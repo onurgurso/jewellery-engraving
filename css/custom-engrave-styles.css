@@ -1,0 +1,170 @@
+/* Styles for the engraving section */
+.engraving-section {
+    display: none;
+    /* Hide the engraving section initially */
+    background-color: #FFF2DF;
+    /* Popup background color */
+    /* width: 85%; */
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 20px 20px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Popup shadow */
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*  transform: translate(-50%, -50%); */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Close button for the popup */
+.engraving-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #000000;
+    padding: 5px 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #000;
+    z-index: 99999;
+
+}
+
+.engraving-popup-close:hover {
+    background-color: #999;
+    /* Hover background color */
+    color: #fff;
+    /* Hover text color */
+}
+
+/* Style the engraving input fields */
+/* .engraving-input {
+    margin-top: 10px;
+    text-align: left; 
+} */
+.engraving-input input[type="text"],
+.engraving-input select {
+    background-color: white;
+    color: #000;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.engraving-input input[type="text"]::placeholder,
+.engraving-input select::placeholder {
+    color: #838383;
+}
+
+.engraving-input p {
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+/* Style the "Engrave" button in the popup */
+#engrave-button,
+.engrave-button {
+    background-color: #0073e6;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Edit and Remove buttons for the engraved text */
+#edit-engraving-button,
+#remove-engraving-button {
+    background-color: #000000;
+    /* Button background color */
+    color: #fff;
+    /* Button text color */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+/* Style the engraving preview image */
+.engraving-preview img {
+    max-width: 100%;
+    min-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px #00000036;
+    -webkit-box-shadow: 0px 0px 9px #00000036;
+    -moz-box-shadow: 0px 0px 9px #00000036;
+}
+
+
+
+/* Ensure the inner-container fills the height of its parent */
+.engraving-section .inner-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    /* overflow-y: auto; 
+    overflow-x: hidden; */
+}
+
+.engraving-section .container-info {
+    max-width: 300px;
+}
+
+.engraving-section .container-image {
+    display: flex;
+    align-items: center;
+}
+
+.engraving-section .container-info .wd-entities-title {
+    font-size: 20px;
+}
+
+.engraving-section .engraving-input .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.engraving-section .engraving-input .button-wrapper button {
+    flex-grow: 1;
+    background-color: #000;
+    color: #fff;
+}
+
+@media (max-width:600px) {
+    .engraving-section {
+        align-items: flex-start;
+    }
+
+    .engraving-section .inner-container {
+        flex-direction: column;
+    }
+}
+
+ul.wc-item-meta.engraving-list {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+
+}
+
+ul.wc-item-meta.engraving-list li {
+    text-align: left;
+}
